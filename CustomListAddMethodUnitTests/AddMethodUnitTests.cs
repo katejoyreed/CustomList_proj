@@ -58,7 +58,40 @@ namespace CustomListAddMethodUnitTests
         }
 
         [TestMethod]
-        public void 
+
+        public void Add_Item_Replace_Array_Verify_Index_Four()
+        {
+            CustomList<int> list = new CustomList<int>();
+            int item = 1;
+            int expected = 1;
+            int actual;
+
+            while (list.Count < 5)
+            {
+                list.Add(item);
+            }
+            actual = list[4];
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+
+        public void Add_Item_Replace_Array_Verify_Index_Zero()
+        {
+            CustomList<int> list = new CustomList<int>();
+            int item = 1;
+            int expected = 1;
+            int actual;
+
+            while (list.Count < 5)
+            {
+                list.Add(item);
+            }
+            actual = list[0];
+
+            Assert.AreEqual(expected, actual);
+        }
 
         [TestMethod]
 
