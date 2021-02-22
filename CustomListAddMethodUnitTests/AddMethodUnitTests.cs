@@ -40,7 +40,7 @@ namespace CustomListAddMethodUnitTests
 
         [TestMethod]
 
-        public void Add_Item_Replace_Array()//Same setup, but also test index 4, also test index 0
+        public void Add_Item_Replace_Array()
         {
             CustomList<int> list = new CustomList<int>();
             int item = 1;
@@ -115,7 +115,24 @@ namespace CustomListAddMethodUnitTests
 
         [TestMethod]
 
-        public void 
-        
+        public void Integers_Third_Item_At_Index_Two()
+        {
+            CustomList<int> list = new CustomList<int>();
+            int item = 1;
+            int item2 = 2;
+            int item3 = 3;
+            int expected = 3;
+            int actual;
+
+            list.Add(item);
+            list.Add(item2);
+            list.Add(item3);
+
+            actual = list[2];
+
+            Assert.AreEqual(expected, actual);
+        }
+
+
     }
 }
