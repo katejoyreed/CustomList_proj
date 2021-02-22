@@ -23,7 +23,24 @@ namespace CustomListAddMethodUnitTests
 
         [TestMethod]
 
-        public void Add_Item_ReplaceArray_Array()
+        public void Add_Two_Items_Count_Increases_By_Two()
+        {
+            CustomList<int> list = new CustomList<int>();
+            int number = 1;
+            int number2 = 2;
+            int expected = 2;
+            int actual;
+
+            list.Add(number);
+            list.Add(number2);
+            actual = list.Count;
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+
+        public void Add_Item_Replace_Array()//Same setup, but also test index 4, also test index 0
         {
             CustomList<int> list = new CustomList<int>();
             int item = 1;
@@ -35,13 +52,17 @@ namespace CustomListAddMethodUnitTests
                 list.Add(item);
             }
             actual = list.Capacity;
+          
 
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
+        public void 
 
-        public void Add_Integers_Second_Item_At_Index_One()
+        [TestMethod]
+
+        public void Add_Integers_Second_Item_At_Index_One()//Test one other index too
         {
             CustomList<int> list = new CustomList<int>();
             int item = 1;
@@ -58,5 +79,10 @@ namespace CustomListAddMethodUnitTests
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+
+        public void 
+        
     }
 }
