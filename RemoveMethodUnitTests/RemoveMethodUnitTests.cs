@@ -87,5 +87,30 @@ namespace RemoveMethodUnitTests
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+
+        public void Remove_From_List_Element_At_Index_Four_Shifts_To_Index_Three()
+        {
+            CustomList<int> list = new CustomList<int>();
+            int item = 1;
+            int item2 = 2;
+            int item3 = 3;
+            int item4 = 1;
+            int item5 = 4;
+            int expected = 4;
+            int actual;
+
+            list.Add(item);
+            list.Add(item2);
+            list.Add(item3);
+            list.Add(item4);
+            list.Add(item5);
+            list.Remove(item);
+            actual = list[3];
+
+            Assert.AreEqual(expected, actual);
+            
+        }
     }
 }
