@@ -63,5 +63,29 @@ namespace RemoveMethodUnitTests
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+
+        public void Remove_Two_Items_Count_Decreases_By_Two()
+        {
+            CustomList<int> list = new CustomList<int>();
+            int item = 1;
+            int item2 = 2;
+            int item3 = 3;
+            int item4 = 1;
+            int expected = 2;
+            int actual;
+
+            list.Add(item);
+            list.Add(item2);
+            list.Add(item3);
+            list.Add(item4);
+            list.Remove(item4);
+            list.Remove(item2);
+
+            actual = list.Count;
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
