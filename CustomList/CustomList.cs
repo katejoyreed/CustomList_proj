@@ -29,10 +29,10 @@ namespace CustomList
         {
             if (count == capacity)
             {
-                capacity = capacity * 2;
+               capacity = capacity * 2;
                T[] _items2 = new T[capacity];
 
-                for (int i = 0; i < _items.Length; i++)
+                for (int i = 0; i < _items.Count(); i++)
                 {
                     T item = _items[i];
                     _items2[count] = item;
@@ -42,6 +42,11 @@ namespace CustomList
             }
             _items[count] = itemToAdd;
             count++;
+        }
+
+        public void Remove()
+        {
+
         }
     }
 }
