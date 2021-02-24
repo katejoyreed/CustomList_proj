@@ -12,8 +12,9 @@ namespace CustomList
         private int capacity;
         private T[] _items;
         //properties and indexer
-        public int Count;
-        public int Capacity;
+        public int Count { get => count; }
+        public int Capacity { get => capacity; }
+        public T this[int index] { get => _items[index]; set => _items[index] = value; }
         
 
         public CustomList()
@@ -21,8 +22,7 @@ namespace CustomList
             count = 0;
             capacity = 4;
             _items = new T[capacity];
-            Count = _items.Length;
-            Capacity = capacity;
+            
         }
 
         public void Add(T itemToAdd)
@@ -31,11 +31,12 @@ namespace CustomList
             {
                capacity = capacity * 2;
                T[] _items2 = new T[capacity];
+               
 
-                for (int i = 0; i < _items.Count(); i++)
+                for (int i = 0; i < count; i++)
                 {
                     T item = _items[i];
-                    _items2[count] = item;
+                    _items2[i] = item;
                 }
                 _items = _items2;
                 
@@ -44,9 +45,9 @@ namespace CustomList
             count++;
         }
 
-        public void Remove()
+        public void Remove(T itemToRemove)
         {
-
+            
         }
     }
 }
