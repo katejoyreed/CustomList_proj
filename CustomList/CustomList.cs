@@ -75,5 +75,10 @@ namespace CustomList
             }
             _items = _items2;
         }
+
+        public override string ToString()
+        {
+
+        }
     }
 }
