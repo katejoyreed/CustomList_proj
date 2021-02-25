@@ -48,19 +48,29 @@ namespace CustomList
         public void Remove(T itemToRemove)
         {
             T[] _items2 = new T[capacity];
-            for (int i = 0; i < count; i++)
+            
+            bool first = true;
+            for (int i = 0; i < count + 1; i++)
             {
-                
                 T item = _items[i];
 
-                if (item.Equals(itemToRemove))
+                if (item.Equals(itemToRemove) && first == true)
                 {
                     count--;
-                    i--;
+                    first = false;
                 }
-                else if (!item.Equals(itemToRemove))
+                else if (!item.Equals(itemToRemove) || first == false)
                 {
-                    _items2[i] = item;
+                    if (first == true)
+                    {
+                        _items2[i] = item;
+                    }
+                    else if (first == false)
+                    {
+                        _items2[i - 1] = item;
+                    }
+                    
+                    
                 }
             }
             _items = _items2;
