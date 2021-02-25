@@ -78,7 +78,15 @@ namespace CustomList
 
         public override string ToString()
         {
-
+            
+            string[] _items2 = new string[capacity];
+            for (int i = 0; i < count; i++)
+            {
+                string _item = $"{_items[i]}";
+                _items2[i] = _item;
+            }
+            string finalString = String.Join(", ", _items2.Where(s => !string.IsNullOrEmpty(s)));
+            return finalString;
         }
     }
 }

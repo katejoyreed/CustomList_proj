@@ -26,12 +26,14 @@ namespace CustomListToStringUnitTests
             CustomList<bool> list = new CustomList<bool>();
             list.Add(true);
             list.Add(false);
-            string expected = "true, false";
+            string expected = "True, False";
             string actual;
 
             actual = list.ToString();
 
             Assert.AreEqual(expected, actual);
         }
+
+        
     }
 }

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomListAddMethodUnitTest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveMethodUnitTests", "RemoveMethodUnitTests\RemoveMethodUnitTests.csproj", "{3B6F485C-B92B-45DA-8790-F6758681761D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomListToStringUnitTests", "CustomListToStringUnitTests\CustomListToStringUnitTests.csproj", "{96D46087-ED08-47CD-925C-0DBD38036CC0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3B6F485C-B92B-45DA-8790-F6758681761D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B6F485C-B92B-45DA-8790-F6758681761D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B6F485C-B92B-45DA-8790-F6758681761D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96D46087-ED08-47CD-925C-0DBD38036CC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96D46087-ED08-47CD-925C-0DBD38036CC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96D46087-ED08-47CD-925C-0DBD38036CC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96D46087-ED08-47CD-925C-0DBD38036CC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

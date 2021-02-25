@@ -17,7 +17,7 @@ namespace CustomList
             list.Add(4);
             list.Add(5);
             list.Add(1);
-            list.Remove(1);
+            list.ToString();
            
 
         }
