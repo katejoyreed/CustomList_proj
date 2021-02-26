@@ -78,5 +78,32 @@ namespace PlusOperatorUnitTests
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void Plus_Operator_Index_Six_Is_Expected()
+        {
+            CustomList<int> list1 = new CustomList<int>();
+            list1.Add(1);
+            list1.Add(2);
+            list1.Add(3);
+            list1.Add(4);
+            list1.Add(5);
+
+            CustomList<int> list2 = new CustomList<int>();
+            list2.Add(6);
+            list2.Add(7);
+            list2.Add(8);
+            list2.Add(9);
+            list2.Add(10);
+
+            CustomList<int> list3 = new CustomList<int>();
+            int expected = 7;
+            int actual;
+
+            list3 = list1 + list2;
+            actual = list3[6];
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
