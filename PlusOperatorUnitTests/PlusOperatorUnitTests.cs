@@ -51,5 +51,32 @@ namespace PlusOperatorUnitTests
 
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+
+        public void Plus_Operator_Third_List_Capacity_Correct()
+        {
+            CustomList<int> list1 = new CustomList<int>();
+            list1.Add(1);
+            list1.Add(1);
+            list1.Add(1);
+            list1.Add(1);
+            list1.Add(1);
+
+            CustomList<int> list2 = new CustomList<int>();
+            list2.Add(2);
+            list2.Add(2);
+            list2.Add(2);
+            list2.Add(2);
+            list2.Add(2);
+
+            CustomList<int> list3 = new CustomList<int>();
+            int expected = 16;
+            int actual;
+
+            list3 = list1 + list2;
+            actual = list3.Capacity;
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
