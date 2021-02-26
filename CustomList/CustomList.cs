@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CustomList
 {
-    public class CustomList<T>
+    public class CustList<T>
     {
         private int count;
         private int capacity;
@@ -17,7 +17,7 @@ namespace CustomList
         public T this[int index] { get => _items[index]; set => _items[index] = value; }
 
 
-        public CustomList()
+        public CustList()
         {
             count = 0;
             capacity = 4;
@@ -89,9 +89,22 @@ namespace CustomList
             return finalString;
         }
 
-        public static T[] PlusOperator()
+        public static CustList<T> operator +(CustList<T> list1, CustList<T> list2)
         {
-
+            CustList<T> list3 = new CustList<T>();
+            
+            for (int i = 0; i < list1.count; i++)
+            {
+                T item = list1[i];
+                list3.Add(item);
+            }
+            for (int i = 0; i < list2.count; i++)
+            {
+                T item = list2[i];
+                list3.Add(item);
+            }
+            
+            return list3;
         }
     }
 }

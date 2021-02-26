@@ -10,11 +10,11 @@ namespace PlusOperatorUnitTests
         [TestMethod]
         public void Plus_Operator_Combines_Two_Collections()
         {
-            CustomList<int> list1 = new CustomList<int>();
+            CustList<int> list1 = new CustList<int>();
             list1.Add(1);
-            CustomList<int> list2 = new CustomList<int>();
+            CustList<int> list2 = new CustList<int>();
             list2.Add(2);
-            CustomList<int> list3 = new CustomList<int>();
+            CustList<int> list3 = new CustList<int>();
             int expected = 2;
             int actual;
 
@@ -28,21 +28,21 @@ namespace PlusOperatorUnitTests
 
         public void Plus_Operator_Third_List_Count_Correct()
         {
-            CustomList<int> list1 = new CustomList<int>();
+            CustList<int> list1 = new CustList<int>();
             list1.Add(1);
             list1.Add(1);
             list1.Add(1);
             list1.Add(1);
             list1.Add(1);
 
-            CustomList<int> list2 = new CustomList<int>();
+            CustList<int> list2 = new CustList<int>();
             list2.Add(2);
             list2.Add(2);
             list2.Add(2);
             list2.Add(2);
             list2.Add(2);
 
-            CustomList<int> list3 = new CustomList<int>();
+            CustList<int> list3 = new CustList<int>();
             int expected = 10;
             int actual;
 
@@ -55,21 +55,21 @@ namespace PlusOperatorUnitTests
 
         public void Plus_Operator_Third_List_Capacity_Correct()
         {
-            CustomList<int> list1 = new CustomList<int>();
+            CustList<int> list1 = new CustList<int>();
             list1.Add(1);
             list1.Add(1);
             list1.Add(1);
             list1.Add(1);
             list1.Add(1);
 
-            CustomList<int> list2 = new CustomList<int>();
+            CustList<int> list2 = new CustList<int>();
             list2.Add(2);
             list2.Add(2);
             list2.Add(2);
             list2.Add(2);
             list2.Add(2);
 
-            CustomList<int> list3 = new CustomList<int>();
+            CustList<int> list3 = new CustList<int>();
             int expected = 16;
             int actual;
 
@@ -82,21 +82,21 @@ namespace PlusOperatorUnitTests
         [TestMethod]
         public void Plus_Operator_Index_Six_Is_Expected()
         {
-            CustomList<int> list1 = new CustomList<int>();
+            CustList<int> list1 = new CustList<int>();
             list1.Add(1);
             list1.Add(2);
             list1.Add(3);
             list1.Add(4);
             list1.Add(5);
 
-            CustomList<int> list2 = new CustomList<int>();
+            CustList<int> list2 = new CustList<int>();
             list2.Add(6);
             list2.Add(7);
             list2.Add(8);
             list2.Add(9);
             list2.Add(10);
 
-            CustomList<int> list3 = new CustomList<int>();
+            CustList<int> list3 = new CustList<int>();
             int expected = 7;
             int actual;
 

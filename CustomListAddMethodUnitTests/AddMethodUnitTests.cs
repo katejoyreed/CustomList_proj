@@ -10,7 +10,7 @@ namespace CustomListAddMethodUnitTests
         [TestMethod]
         public void Add_Item_Count_Increases()
         {
-            CustomList<int> list = new CustomList<int>();
+            CustList<int> list = new CustList<int>();
             int number = 1;
             int expected = 1;
             int actual;
@@ -25,7 +25,7 @@ namespace CustomListAddMethodUnitTests
 
         public void Add_Two_Items_Count_Increases_By_Two()
         {
-            CustomList<int> list = new CustomList<int>();
+            CustList<int> list = new CustList<int>();
             int number = 1;
             int number2 = 2;
             int expected = 2;
@@ -42,7 +42,7 @@ namespace CustomListAddMethodUnitTests
 
         public void Add_Item_Replace_Array()
         {
-            CustomList<int> list = new CustomList<int>();
+            CustList<int> list = new CustList<int>();
             int item = 1;
             int expected = 8;
             int actual;
@@ -61,7 +61,7 @@ namespace CustomListAddMethodUnitTests
 
         public void Add_Item_Replace_Array_Verify_Index_Four()
         {
-            CustomList<int> list = new CustomList<int>();
+            CustList<int> list = new CustList<int>();
             int item = 1;
             int expected = 1;
             int actual;
@@ -79,7 +79,7 @@ namespace CustomListAddMethodUnitTests
 
         public void Add_Item_Replace_Array_Verify_Index_Zero()
         {
-            CustomList<int> list = new CustomList<int>();
+            CustList<int> list = new CustList<int>();
             int item = 1;
             int expected = 1;
             int actual;
@@ -95,9 +95,9 @@ namespace CustomListAddMethodUnitTests
 
         [TestMethod]
 
-        public void Add_Integers_Second_Item_At_Index_One()//Test one other index too
+        public void Add_Integers_Second_Item_At_Index_One()
         {
-            CustomList<int> list = new CustomList<int>();
+            CustList<int> list = new CustList<int>();
             int item = 1;
             int item2 = 2;
             int item3 = 3;
@@ -117,7 +117,7 @@ namespace CustomListAddMethodUnitTests
 
         public void Integers_Third_Item_At_Index_Two()
         {
-            CustomList<int> list = new CustomList<int>();
+            CustList<int> list = new CustList<int>();
             int item = 1;
             int item2 = 2;
             int item3 = 3;

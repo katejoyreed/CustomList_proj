@@ -10,7 +10,7 @@ namespace RemoveMethodUnitTests
         [TestMethod]
         public void Remove_From_List_Count_Decreases()
         {
-            CustomList<int> list = new CustomList<int>();
+            CustList<int> list = new CustList<int>();
             int item = 1;
             int expected = 0;
             int actual;
@@ -26,7 +26,7 @@ namespace RemoveMethodUnitTests
 
         public void Remove_From_List_Item_At_Index_One_Shifts_To_Zero()
         {
-            CustomList<int> list = new CustomList<int>();
+            CustList<int> list = new CustList<int>();
             int item = 1;
             int item2 = 2;
             int expected = 2;
@@ -46,7 +46,7 @@ namespace RemoveMethodUnitTests
 
         public void Remove_Item_Removes_Only_First_Instance_Of_Item()
         {
-            CustomList<int> list = new CustomList<int>();
+            CustList<int> list = new CustList<int>();
             int item = 1;
             int item2 = 2;
             int item3 = 3;
@@ -68,7 +68,7 @@ namespace RemoveMethodUnitTests
 
         public void Remove_Two_Items_Count_Decreases_By_Two()
         {
-            CustomList<int> list = new CustomList<int>();
+            CustList<int> list = new CustList<int>();
             int item = 1;
             int item2 = 2;
             int item3 = 3;
@@ -92,7 +92,7 @@ namespace RemoveMethodUnitTests
 
         public void Remove_From_List_Element_At_Index_Four_Shifts_To_Index_Three()
         {
-            CustomList<int> list = new CustomList<int>();
+            CustList<int> list = new CustList<int>();
             int item = 1;
             int item2 = 2;
             int item3 = 3;
@@ -108,6 +108,8 @@ namespace RemoveMethodUnitTests
             list.Add(item5);
             list.Remove(item);
             actual = list[3];
+
+            
 
             Assert.AreEqual(expected, actual);
             
