@@ -49,5 +49,26 @@ namespace CustomListMinusOperatorUnitTests
 
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void Minus_Operator_Nothing_Count_Remains_Same_If_No_Shared_Values()
+        {
+            CustList<int> list1 = new CustList<int>();
+            list1.Add(1);
+            list1.Add(3);
+            list1.Add(5);
+            list1.Add(7);
+            CustList<int> list2 = new CustList<int>();
+            list2.Add(2);
+            list2.Add(4);
+            list2.Add(6);
+            CustList<int> list3 = new CustList<int>();
+            int expected = 4;
+            int actual;
+
+            list3 = list1 - list2;
+            actual = list3.Count;
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
