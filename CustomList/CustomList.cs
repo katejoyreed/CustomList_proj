@@ -50,13 +50,13 @@ namespace CustomList
             T[] _items2 = new T[capacity];
 
             bool first = true;
-            for (int i = 0; i < count + 1; i++)
+            for (int i = 0; i < count; i++)
             {
                 T item = _items[i];
 
                 if (item.Equals(itemToRemove) && first == true)
                 {
-                    count--;
+                    
                     first = false;
                 }
                 else if (!item.Equals(itemToRemove) || first == false)
@@ -72,6 +72,10 @@ namespace CustomList
 
 
                 }
+            }
+            if (first == false)
+            {
+                count--;
             }
             _items = _items2;
         }
@@ -105,6 +109,17 @@ namespace CustomList
             }
             
             return list3;
+        }
+
+        public static CustList<T> operator -(CustList<T> list1, CustList<T> list2)
+        {
+            for (int i = 0; i < list1.count; i++)
+            {
+                if (list1[i] == list2[i])
+                {
+                    list1.Remove()
+                }
+            }
         }
     }
 }
