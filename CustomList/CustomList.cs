@@ -121,5 +121,20 @@ namespace CustomList
             }
             return list1;
         }
+
+        public CustList<T> Zip(CustList<T> list2)
+        {
+            CustList<T> list3 = new CustList<T>();
+            while (list3.Count < (count + list2.count))
+            {
+                for (int i = 0; i < count; i++)
+                {
+                    list3.Add(_items[i]);
+                    list3.Add(list2[i]);
+                }
+                
+            }
+            return list3;
+        }
     }
 }

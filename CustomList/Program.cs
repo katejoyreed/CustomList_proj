@@ -28,7 +28,7 @@ namespace CustomList
 
             CustList<int> list3 = new CustList<int>();
 
-            list3 = list + list2;
+            list3 = list.Zip(list2);
            
 
         }
