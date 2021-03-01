@@ -113,13 +113,16 @@ namespace CustomList
 
         public static CustList<T> operator -(CustList<T> list1, CustList<T> list2)
         {
+            CustList<T> list3 = new CustList<T>();
+
             for (int i = 0; i < list1.count; i++)
             {
-                if (list1[i] == list2[i])
+                if (!list1[i].Equals(list2[i]))
                 {
-                    list1.Remove()
+                    list3.Add(list1[i]);
                 }
             }
+            return list3;
         }
     }
 }

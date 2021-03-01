@@ -114,5 +114,24 @@ namespace RemoveMethodUnitTests
             Assert.AreEqual(expected, actual);
             
         }
+
+        [TestMethod]
+
+        public void Remove_Method_Count_Remains_Same_If_Item_To_Remove_Is_Not_In_List()
+        {
+            CustList<int> list = new CustList<int>();
+            list.Add(1);
+            list.Add(2);
+            list.Add(3);
+            list.Add(4);
+            list.Add(5);
+            int expected = 5;
+            int actual;
+
+            list.Remove(6);
+            actual = list.Count;
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
